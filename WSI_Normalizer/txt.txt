@@ -1,0 +1,7 @@
+17%|██████▉                                   | 26/157 [00:49<06:49,  3.13s/it]Processing folder: CHS023-WSI02
+Processing 119 / 2202 Time elapse 0.08 s
+/mnt/pathology/Histology/Annotation_new/tiles_512_20X_WhiteIsTumor_noOverlap_Filtered/Images/CHS023-WSI02/CHS023-WSI02 [d=2,x=88064,y=23552,w=1024,h=1024].jpeg
+
+rsync -avz --ignore-existing --progress -e ssh ./tiles_512_20X_WhiteIsTumor_noOverlap_Filtered_Normed/ r20user18@research20.saas.hku.hk:/home/r20user18/Documents/datasets/WSI/Tiles
+
+python3 main.py --target_dir /mnt/pathology/Histology/Annotation_new/tiles_512_20X_WhiteIsTumor_noOverlap_calibrate_Filtered/Images --output_dir /mnt/pathology/Histology/Annotation_new/tiles_512_20X_WhiteIsTumor_noOverlap_calibrate_Filtered_Normed/Images --method vahadane --target_img eg/standard.jpg
